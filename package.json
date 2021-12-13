@@ -1,0 +1,43 @@
+{
+  "name": "490939-buy-and-sell-3",
+  "version": "1.0.0",
+  "description": "Куплю. Продам",
+  "main": "./src/service/service.js",
+  "scripts": {
+    "eslint": "eslint --ext .js src/",
+    "test": "npm run eslint",
+    "start": "nodemon ./src/service/service.js",
+    "debug": "node --inspect ./src/service/service.js --generate 3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akzhar/490939-buy-and-sell-3.git"
+  },
+  "author": "akzhar.taov@yandex.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akzhar/490939-buy-and-sell-3/issues"
+  },
+  "homepage": "https://github.com/akzhar/490939-buy-and-sell-3#readme",
+  "devDependencies": {
+    "eslint": "8.0.1",
+    "eslint-config-htmlacademy": "0.6.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.2.3",
+    "nodemon": "2.0.15"
+  },
+  "dependencies": {
+    "chalk": "4.1.2"
+  }
+}
